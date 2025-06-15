@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="login-container">
+    <div class="login-left">
+        <img src="assets/CRM.png" alt="CRM System Banner" />
+        <h4>All-in-One CRM Solution</h4>
+        <h4>Designed for Sales, Marketing & Support Teams</h4>
+    </div>
+      
+
+  <div class="login-right">
+    <div class="login-form">
+      <img src="assets/DigiSME_2d.png" alt="DigiSME Logo" class="logo" />
+      <h4>Welcome Back!</h4>
+      <form [formGroup]="formdata" (submit)="Login()">
+        <div class="form-group">
+          <i class="fas fa-envelope icon"></i>
+          <input type="email" placeholder="Email Address / Mobile No." class="form-control"  [ngClass]="submited && form.email_phone.errors ? 'border border-danger':''" formControlName="email_phone" required />
+        </div>
+        <div class="form-group">
+          <i class="fas fa-lock icon"></i>
+          <input type="password" placeholder="Password" class="form-control"  [ngClass]="submited && form.password.errors ? 'border border-danger':''" formControlName="password" required/>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <a href="#" class="forgot-password">Activate / Forgot password with OTP</a>
+        <p class="signup-link">Create an account? <a routerLink="/register">Sign up</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

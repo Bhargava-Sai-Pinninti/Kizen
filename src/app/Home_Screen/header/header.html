@@ -1,0 +1,50 @@
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" routerLink="/">
+                <img src="assets/DigiSME_Logo.png" alt="Logo" width="auto" height="35">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/home" routerLinkActive="active-link">
+                            <i class="fa-solid fa-house"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active-link">
+                            <i class="fa-solid fa-sliders"></i> dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/about" routerLinkActive="active-link">
+                            <i class="fa-solid fa-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/contact" routerLinkActive="active-link">
+                            <i class="fa-solid fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Buttons on the Right -->
+        <div class="d-flex align-items-center gap-1 nav-buttons ms-auto me-1">
+            <a class="btn btn-primary d-flex align-items-center" routerLink="/login" routerLinkActive="active-btn">
+                <i class="fa-solid fa-sign-in-alt"></i> <span>Login</span>
+            </a>
+            <a class="btn btn-warning text-dark d-flex align-items-center" routerLink="/register"
+                routerLinkActive="active-btn">
+                <i class="fa-solid fa-user-plus"></i> <span>Sign Up</span>
+            </a>
+        </div>
+
+    </nav>
+</header>

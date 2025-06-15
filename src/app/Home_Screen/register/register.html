@@ -1,0 +1,59 @@
+<app-header></app-header>
+<div class="register-container">
+  <div class="register-left">
+    <img src="assets/CRM.png" alt="Register Banner" />
+    <h4>All-in-One CRM Solution</h4>
+    <h4>Designed for Sales, Marketing & Support Teams</h4>
+  </div>
+
+  <div class="register-right">
+    <div class="register-form">
+      <img src="assets/DigiSME_2d.png" alt="DigiSME Logo" class="logo" />
+      <h4>Create an Account</h4>
+
+      <form [formGroup]="formdata" (submit)="Register()">
+
+        <div class="form-group">
+          <i class="fas fa-user icon"></i>
+          <input type="text" placeholder="Full Name" class="form-control" 
+            [ngClass]="submited && form.full_name.errors ? 'border border-danger' : ''" 
+            formControlName="full_name" required/>
+        </div>
+      
+        <div class="form-group">
+          <i class="fas fa-envelope icon"></i>
+          <input type="email" placeholder="Email Address" class="form-control" 
+            [ngClass]="submited && form.email.errors ? 'border border-danger' : ''" 
+            formControlName="email" required/>
+        </div>
+      
+        <div class="form-group">
+          <i class="fas fa-phone icon"></i>
+          <input type="tel" placeholder="Mobile Number" class="form-control" 
+            [ngClass]="submited && form.phone.errors ? 'border border-danger' : ''" 
+            formControlName="phone" required/>
+        </div>
+      
+        <div class="form-group">
+          <i class="fas fa-lock icon"></i>
+          <input type="password" placeholder="Password" class="form-control" 
+            [ngClass]="submited && form.password.errors ? 'border border-danger' : ''" 
+            formControlName="password" required/>
+        </div>
+      
+        <div class="form-group">
+          <i class="fas fa-lock icon"></i>
+          <input type="password" placeholder="Confirm Password" class="form-control" 
+            [ngClass]="submited && form.c_password.errors ? 'border border-danger' : ''" 
+            formControlName="c_password" required/>
+        </div>
+      
+        <button type="submit" class="btn btn-primary" [disabled]="formdata.invalid">Sign Up</button>
+        <p class="login-link">Already have an account? <a routerLink="/login">Login here</a></p>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
