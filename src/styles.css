@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-image: url('assets/bg-home.png'); /* adjust the path */
+    background-image: url('/image_assets/bg-home.png'); /* adjust the path */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
